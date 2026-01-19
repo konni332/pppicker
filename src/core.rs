@@ -25,6 +25,30 @@ pub fn handle_action(action: &Action, tx: &mpsc::Sender<i32>, window: &Window) {
 
 use tracing::{info, warn};
 
+#[cfg(not(debug_assertions))]
+pub fn load_css(name: &str) {
+    let provider = CssProvider::new();
+    let css = get_picker_css(name)
+        .or_else(|| {
+            warn!("No picker-specific CSS found for '{}'", name);
+            get_style_css()
+        })
+        .unwrap_or_else(|| {
+            warn!("No user style.css found, using default");
+            DEFAULT_CSS.to_string()
+        });
+
+    info!("Loaded CSS (length: {} bytes)", css.len());
+
+    provider.load_from_data(&css);
+    gtk::style_context_add_provider_for_display(
+        &Display::default().expect("Could not connect to display"),
+        &provider,
+        gtk::STYLE_PROVIDER_PRIORITY_APPLICATION,
+    );
+}
+
+#[cfg(debug_assertions)]
 pub fn load_css(name: &str) {
     let provider = CssProvider::new();
     let css = get_picker_css(name)

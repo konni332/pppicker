@@ -5,7 +5,6 @@ edition = "2024"
 
 [dependencies]
 gtk = { package = "gtk4", version = "0.10" }
-gtk-layer-shell = { package = "gtk4-layer-shell", version = "0.7" }
 glib = "0.21"
 gio = "0.21"
 
