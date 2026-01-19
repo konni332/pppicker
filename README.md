@@ -116,7 +116,7 @@ echo '{"name": "test", "items": [...]}' | pppicker
 
 ### Keyboard Controls
 
-- **Arrow Keys / hjkl**: Navigate items
+- **Arrow Keys**: Navigate items
 - **Enter**: Select item and execute action
 - **Escape**: Close picker
 
