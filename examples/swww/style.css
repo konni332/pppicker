@@ -1,0 +1,95 @@
+/* SWWW Picker - Gruvbox Light Single Preview Style */
+
+.picker-window {
+    background-color: #fbf1c7;
+    min-width: 700px;
+    min-height: 800px;
+}
+
+.picker-scrolled {
+    background-color: #fbf1c7;
+    padding: 60px;
+}
+
+.picker-grid {
+    background-color: #fbf1c7;
+    border: none;
+}
+
+.picker-grid-item {
+    padding: 40px;
+    margin: 20px;
+    color: #3c3836;
+    background-color: transparent;
+    border-radius: 0;
+    border: none;
+    outline: none;
+    transition: all 300ms ease;
+}
+
+.picker-grid-item:focus {
+    outline: none;
+    border: none;
+}
+
+.picker-grid-item-box {
+    min-width: 500px;
+}
+
+.picker-grid-item:hover {
+    background-color: transparent;
+    transform: scale(1.02);
+}
+
+.picker-grid-item:selected {
+    background-color: transparent;
+}
+
+.picker-grid-item:selected .picker-label {
+    color: #98971a;
+    font-weight: 800;
+}
+
+.picker-grid-item:selected:hover {
+    background-color: transparent;
+    transform: scale(1.02);
+}
+
+.picker-label {
+    font-size: 20px;
+    font-weight: 700;
+    color: #504945;
+    margin-top: 20px;
+}
+
+.picker-icon {
+    margin-right: 0;
+}
+
+.picker-icon-unicode {
+    font-size: 28px;
+}
+
+.picker-icon-path {
+    min-width: 36px;
+    min-height: 36px;
+    -gtk-icon-size: 36px;
+}
+
+/* Grid-specific - Single large preview */
+.picker-grid .picker-icon-unicode {
+    font-size: 140px;
+    margin-right: 0;
+    margin-bottom: 28px;
+}
+
+.picker-grid .picker-icon-path {
+    min-width: 500px;
+    min-height: 500px;
+    -gtk-icon-size: 500px;
+    margin-right: 0;
+    margin-bottom: 28px;
+    border-radius: 16px;
+    border: none;
+    outline: none;
+}

@@ -1,0 +1,87 @@
+/* Hyprpaper Picker - Nord Theme */
+
+.picker-window {
+    background-color: #2e3440;
+    min-width: 900px;
+    min-height: 700px;
+}
+
+.picker-scrolled {
+    background-color: #2e3440;
+    padding: 32px;
+}
+
+.picker-grid {
+    background-color: #2e3440;
+    border: none;
+}
+
+.picker-grid-item {
+    padding: 16px;
+    margin: 8px;
+    color: #d8dee9;
+    background-color: #3b4252;
+    border-radius: 12px;
+    border: none;
+    transition: all 200ms ease;
+}
+
+.picker-grid-item-box {
+    min-width: 120px;
+}
+
+.picker-grid-item:hover {
+    background-color: #434c5e;
+    transform: translateY(-2px);
+}
+
+.picker-grid-item:selected {
+    background-color: #88c0d0;
+    border: none;
+}
+
+.picker-grid-item:selected .picker-label {
+    color: #2e3440;
+    font-weight: 600;
+}
+
+.picker-grid-item:selected:hover {
+    background-color: #8fbcbb;
+}
+
+.picker-label {
+    font-size: 13px;
+    font-weight: 500;
+    color: #d8dee9;
+    margin-top: 8px;
+}
+
+.picker-icon {
+    margin-right: 0;
+}
+
+.picker-icon-unicode {
+    font-size: 20px;
+}
+
+.picker-icon-path {
+    min-width: 24px;
+    min-height: 24px;
+    -gtk-icon-size: 24px;
+}
+
+/* Grid-specific */
+.picker-grid .picker-icon-unicode {
+    font-size: 48px;
+    margin-right: 0;
+    margin-bottom: 8px;
+}
+
+.picker-grid .picker-icon-path {
+    min-width: 100px;
+    min-height: 100px;
+    -gtk-icon-size: 100px;
+    margin-right: 0;
+    margin-bottom: 8px;
+    border-radius: 8px;
+}

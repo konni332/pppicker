@@ -1,0 +1,272 @@
+{
+  "name": "list",
+  "view": {
+    "layout": "list"
+  },
+  "items": [
+    {
+      "id": "terminal",
+      "label": "Open Terminal",
+      "icon": {
+        "type": "unicode",
+        "value": ""
+      },
+      "action": {
+        "action": "exec",
+        "cmd": "foot"
+      }
+    },
+    {
+      "id": "browser",
+      "label": "Web Browser",
+      "icon": {
+        "type": "unicode",
+        "value": "🌐"
+      },
+      "action": {
+        "action": "exec",
+        "cmd": "firefox"
+      }
+    },
+    {
+      "id": "file-manager",
+      "label": "File Manager",
+      "icon": {
+        "type": "unicode",
+        "value": "📁"
+      },
+      "action": {
+        "action": "exec",
+        "cmd": "thunar"
+      }
+    },
+    {
+      "id": "text-editor",
+      "label": "Text Editor",
+      "icon": {
+        "type": "unicode",
+        "value": "📝"
+      },
+      "action": {
+        "action": "exec",
+        "cmd": "nvim"
+      }
+    },
+    {
+      "id": "music",
+      "label": "Music Player",
+      "icon": {
+        "type": "unicode",
+        "value": "🎵"
+      },
+      "action": {
+        "action": "exec",
+        "cmd": "spotify"
+      }
+    },
+    {
+      "id": "video",
+      "label": "Video Player",
+      "icon": {
+        "type": "unicode",
+        "value": "🎬"
+      },
+      "action": {
+        "action": "exec",
+        "cmd": "mpv"
+      }
+    },
+    {
+      "id": "settings",
+      "label": "System Settings",
+      "icon": {
+        "type": "unicode",
+        "value": "⚙️"
+      },
+      "action": {
+        "action": "exec",
+        "cmd": "gnome-control-center"
+      }
+    },
+    {
+      "id": "calculator",
+      "label": "Calculator",
+      "icon": {
+        "type": "unicode",
+        "value": "🔢"
+      },
+      "action": {
+        "action": "exec",
+        "cmd": "gnome-calculator"
+      }
+    },
+    {
+      "id": "email",
+      "label": "Email Client",
+      "icon": {
+        "type": "unicode",
+        "value": "📧"
+      },
+      "action": {
+        "action": "exec",
+        "cmd": "thunderbird"
+      }
+    },
+    {
+      "id": "calendar",
+      "label": "Calendar",
+      "icon": {
+        "type": "unicode",
+        "value": "📅"
+      },
+      "action": {
+        "action": "exec",
+        "cmd": "gnome-calendar"
+      }
+    },
+    {
+      "id": "camera",
+      "label": "Camera",
+      "icon": {
+        "type": "unicode",
+        "value": "📷"
+      },
+      "action": {
+        "action": "exec",
+        "cmd": "cheese"
+      }
+    },
+    {
+      "id": "screenshot",
+      "label": "Screenshot Tool",
+      "icon": {
+        "type": "unicode",
+        "value": "📸"
+      },
+      "action": {
+        "action": "exec",
+        "cmd": "flameshot gui"
+      }
+    },
+    {
+      "id": "image-viewer",
+      "label": "Image Viewer",
+      "icon": {
+        "type": "unicode",
+        "value": "🖼️"
+      },
+      "action": {
+        "action": "exec",
+        "cmd": "eog"
+      }
+    },
+    {
+      "id": "pdf-reader",
+      "label": "PDF Reader",
+      "icon": {
+        "type": "unicode",
+        "value": "📄"
+      },
+      "action": {
+        "action": "exec",
+        "cmd": "evince"
+      }
+    },
+    {
+      "id": "download",
+      "label": "Downloads Folder",
+      "icon": {
+        "type": "unicode",
+        "value": "⬇️"
+      },
+      "action": {
+        "action": "exec",
+        "cmd": "xdg-open ~/Downloads"
+      }
+    },
+    {
+      "id": "documents",
+      "label": "Documents",
+      "icon": {
+        "type": "unicode",
+        "value": "📚"
+      },
+      "action": {
+        "action": "exec",
+        "cmd": "xdg-open ~/Documents"
+      }
+    },
+    {
+      "id": "pictures",
+      "label": "Pictures",
+      "icon": {
+        "type": "unicode",
+        "value": "🖼️"
+      },
+      "action": {
+        "action": "exec",
+        "cmd": "xdg-open ~/Pictures"
+      }
+    },
+    {
+      "id": "lock",
+      "label": "Lock Screen",
+      "icon": {
+        "type": "unicode",
+        "value": "🔒"
+      },
+      "action": {
+        "action": "exec",
+        "cmd": "loginctl lock-session"
+      }
+    },
+    {
+      "id": "logout",
+      "label": "Logout",
+      "icon": {
+        "type": "unicode",
+        "value": "🚪"
+      },
+      "action": {
+        "action": "exec",
+        "cmd": "loginctl terminate-user $USER"
+      }
+    },
+    {
+      "id": "shutdown",
+      "label": "Shutdown",
+      "icon": {
+        "type": "unicode",
+        "value": "⏻"
+      },
+      "action": {
+        "action": "exec",
+        "cmd": "systemctl poweroff"
+      }
+    },
+    {
+      "id": "reboot",
+      "label": "Reboot",
+      "icon": {
+        "type": "unicode",
+        "value": "🔄"
+      },
+      "action": {
+        "action": "exec",
+        "cmd": "systemctl reboot"
+      }
+    },
+    {
+      "id": "cancel",
+      "label": "Cancel",
+      "icon": {
+        "type": "unicode",
+        "value": "❌"
+      },
+      "action": {
+        "action": "exit",
+        "code": 1
+      }
+    }
+  ]
+}

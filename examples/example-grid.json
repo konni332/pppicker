@@ -1,0 +1,296 @@
+{
+  "name": "grid",
+  "view": {
+    "layout": "grid"
+  },
+  "items": [
+    {
+      "id": "catppuccin-mocha",
+      "label": "Catppuccin Mocha",
+      "icon": {
+        "type": "unicode",
+        "value": "🌙"
+      },
+      "action": {
+        "action": "print",
+        "value": "catppuccin-mocha"
+      }
+    },
+    {
+      "id": "catppuccin-latte",
+      "label": "Catppuccin Latte",
+      "icon": {
+        "type": "unicode",
+        "value": "☕"
+      },
+      "action": {
+        "action": "print",
+        "value": "catppuccin-latte"
+      }
+    },
+    {
+      "id": "dracula",
+      "label": "Dracula",
+      "icon": {
+        "type": "unicode",
+        "value": "🧛"
+      },
+      "action": {
+        "action": "print",
+        "value": "dracula"
+      }
+    },
+    {
+      "id": "nord",
+      "label": "Nord",
+      "icon": {
+        "type": "unicode",
+        "value": "❄️"
+      },
+      "action": {
+        "action": "print",
+        "value": "nord"
+      }
+    },
+    {
+      "id": "gruvbox-dark",
+      "label": "Gruvbox Dark",
+      "icon": {
+        "type": "unicode",
+        "value": "🌲"
+      },
+      "action": {
+        "action": "print",
+        "value": "gruvbox-dark"
+      }
+    },
+    {
+      "id": "gruvbox-light",
+      "label": "Gruvbox Light",
+      "icon": {
+        "type": "unicode",
+        "value": "🌻"
+      },
+      "action": {
+        "action": "print",
+        "value": "gruvbox-light"
+      }
+    },
+    {
+      "id": "tokyo-night",
+      "label": "Tokyo Night",
+      "icon": {
+        "type": "unicode",
+        "value": "🗼"
+      },
+      "action": {
+        "action": "print",
+        "value": "tokyo-night"
+      }
+    },
+    {
+      "id": "one-dark",
+      "label": "One Dark",
+      "icon": {
+        "type": "unicode",
+        "value": "🔵"
+      },
+      "action": {
+        "action": "print",
+        "value": "one-dark"
+      }
+    },
+    {
+      "id": "solarized-dark",
+      "label": "Solarized Dark",
+      "icon": {
+        "type": "unicode",
+        "value": "☀️"
+      },
+      "action": {
+        "action": "print",
+        "value": "solarized-dark"
+      }
+    },
+    {
+      "id": "solarized-light",
+      "label": "Solarized Light",
+      "icon": {
+        "type": "unicode",
+        "value": "🌤️"
+      },
+      "action": {
+        "action": "print",
+        "value": "solarized-light"
+      }
+    },
+    {
+      "id": "material-ocean",
+      "label": "Material Ocean",
+      "icon": {
+        "type": "unicode",
+        "value": "🌊"
+      },
+      "action": {
+        "action": "print",
+        "value": "material-ocean"
+      }
+    },
+    {
+      "id": "material-palenight",
+      "label": "Material Palenight",
+      "icon": {
+        "type": "unicode",
+        "value": "🌆"
+      },
+      "action": {
+        "action": "print",
+        "value": "material-palenight"
+      }
+    },
+    {
+      "id": "monokai",
+      "label": "Monokai",
+      "icon": {
+        "type": "unicode",
+        "value": "🎨"
+      },
+      "action": {
+        "action": "print",
+        "value": "monokai"
+      }
+    },
+    {
+      "id": "ayu-dark",
+      "label": "Ayu Dark",
+      "icon": {
+        "type": "unicode",
+        "value": "🌑"
+      },
+      "action": {
+        "action": "print",
+        "value": "ayu-dark"
+      }
+    },
+    {
+      "id": "ayu-light",
+      "label": "Ayu Light",
+      "icon": {
+        "type": "unicode",
+        "value": "🌕"
+      },
+      "action": {
+        "action": "print",
+        "value": "ayu-light"
+      }
+    },
+    {
+      "id": "everforest",
+      "label": "Everforest",
+      "icon": {
+        "type": "unicode",
+        "value": "🌳"
+      },
+      "action": {
+        "action": "print",
+        "value": "everforest"
+      }
+    },
+    {
+      "id": "rosepine",
+      "label": "Rosé Pine",
+      "icon": {
+        "type": "unicode",
+        "value": "🌹"
+      },
+      "action": {
+        "action": "print",
+        "value": "rosepine"
+      }
+    },
+    {
+      "id": "kanagawa",
+      "label": "Kanagawa",
+      "icon": {
+        "type": "unicode",
+        "value": "🌊"
+      },
+      "action": {
+        "action": "print",
+        "value": "kanagawa"
+      }
+    },
+    {
+      "id": "palenight",
+      "label": "Palenight",
+      "icon": {
+        "type": "unicode",
+        "value": "🌃"
+      },
+      "action": {
+        "action": "print",
+        "value": "palenight"
+      }
+    },
+    {
+      "id": "nightfox",
+      "label": "Nightfox",
+      "icon": {
+        "type": "unicode",
+        "value": "🦊"
+      },
+      "action": {
+        "action": "print",
+        "value": "nightfox"
+      }
+    },
+    {
+      "id": "dayfox",
+      "label": "Dayfox",
+      "icon": {
+        "type": "unicode",
+        "value": "🦊"
+      },
+      "action": {
+        "action": "print",
+        "value": "dayfox"
+      }
+    },
+    {
+      "id": "github-dark",
+      "label": "GitHub Dark",
+      "icon": {
+        "type": "unicode",
+        "value": "🐙"
+      },
+      "action": {
+        "action": "print",
+        "value": "github-dark"
+      }
+    },
+    {
+      "id": "github-light",
+      "label": "GitHub Light",
+      "icon": {
+        "type": "unicode",
+        "value": "🐙"
+      },
+      "action": {
+        "action": "print",
+        "value": "github-light"
+      }
+    },
+    {
+      "id": "custom",
+      "label": "Custom Theme",
+      "icon": {
+        "type": "unicode",
+        "value": "✨"
+      },
+      "action": {
+        "action": "print",
+        "value": "custom"
+      }
+    }
+  ]
+}
