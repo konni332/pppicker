@@ -8,6 +8,13 @@ pub struct InputData {
     pub items: Vec<Item>,
     #[serde(default)]
     pub view: View,
+    #[serde(default, rename = "search-bar")]
+    pub search_bar: Option<SearchBar>,
+}
+
+#[derive(Debug, Clone, Deserialize, Default)]
+pub struct SearchBar {
+    pub placeholder: String,
 }
 
 #[derive(Debug, Clone, Deserialize, Default)]

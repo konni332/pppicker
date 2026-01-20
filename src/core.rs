@@ -95,35 +95,80 @@ fn get_current_css() -> Option<String> {
 }
 
 const DEFAULT_CSS: &str = r#"
+/* Window */
 .picker-window {
     background-color: #282828;
 }
 
+/* Search bar */
+.picker-search {
+    background-color: #3c3836;
+    color: #ebdbb2;
+    border: none;
+    border-radius: 0;
+    padding: 12px 16px;
+    font-size: 14px;
+    margin: 0;
+}
+
+.picker-search:focus {
+    outline: none;
+    background-color: #504945;
+}
+
+/* Scrolled container */
 .picker-scrolled {
     background-color: #282828;
     padding: 16px;
 }
 
+/* List view */
 .picker-list {
     background-color: #282828;
     border: none;
 }
 
+.picker-row {
+    padding: 12px 16px;
+    margin: 4px 0;
+    color: #ebdbb2;
+    background-color: #3c3836;
+    border-radius: 6px;
+    border: none;
+}
+
+.picker-row-box {
+    /* Container for icon + label in list rows */
+}
+
+.picker-row:hover {
+    background-color: #504945;
+}
+
+.picker-row:selected {
+    background-color: #d79921;
+}
+
+.picker-row:selected .picker-label {
+    color: #282828;
+}
+
+.picker-row:selected .picker-icon {
+    color: #282828;
+}
+
+.picker-row:selected:hover {
+    background-color: #fabd2f;
+}
+
+/* Grid view */
 .picker-grid {
     background-color: #282828;
     border: none;
 }
 
-.picker-row {
-    padding: 0;
-    margin: 4px 0;
-    color: #ebdbb2;
-    background-color: transparent;
-    border: none;
-}
-
 .picker-grid-item {
-    padding: 12px;
+    padding: 16px;
     margin: 6px;
     color: #ebdbb2;
     background-color: #3c3836;
@@ -135,31 +180,15 @@ const DEFAULT_CSS: &str = r#"
     min-width: 100px;
 }
 
-.picker-row:hover {
-    background-color: #3c3836;
-}
-
 .picker-grid-item:hover {
     background-color: #504945;
-}
-
-.picker-row:selected {
-    background-color: #d79921;
 }
 
 .picker-grid-item:selected {
     background-color: #d79921;
 }
 
-.picker-row:selected .picker-label {
-    color: #282828;
-}
-
 .picker-grid-item:selected .picker-label {
-    color: #282828;
-}
-
-.picker-row:selected .picker-icon {
     color: #282828;
 }
 
@@ -167,20 +196,21 @@ const DEFAULT_CSS: &str = r#"
     color: #282828;
 }
 
-.picker-row:selected:hover {
-    background-color: #fabd2f;
-}
-
 .picker-grid-item:selected:hover {
     background-color: #fabd2f;
 }
 
+/* Labels */
 .picker-label {
     font-size: 14px;
     font-weight: 500;
+}
+
+.picker-grid .picker-label {
     margin-top: 8px;
 }
 
+/* Icons */
 .picker-icon {
     margin-right: 8px;
 }
@@ -196,9 +226,12 @@ const DEFAULT_CSS: &str = r#"
 }
 
 /* Grid-specific icon sizing */
+.picker-grid .picker-icon {
+    margin-right: 0;
+}
+
 .picker-grid .picker-icon-unicode {
     font-size: 48px;
-    margin-right: 0;
     margin-bottom: 8px;
 }
 
@@ -206,7 +239,6 @@ const DEFAULT_CSS: &str = r#"
     min-width: 80px;
     min-height: 80px;
     -gtk-icon-size: 80px;
-    margin-right: 0;
     margin-bottom: 8px;
     border-radius: 6px;
 }

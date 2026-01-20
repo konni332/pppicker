@@ -18,8 +18,8 @@ pub fn run_ui(app: &Application, data: InputData, tx: std::sync::mpsc::Sender<i3
     window.add_css_class("picker-window");
 
     let content = match data.view.layout {
-        Layout::List => list::build_list_view(&data.items, tx.clone(), window.clone()),
-        Layout::Grid => grid::build_grid_view(&data.items, tx.clone(), window.clone()),
+        Layout::List => list::create_picker(&data, tx.clone(), window.clone()),
+        Layout::Grid => unimplemented!(),
     };
 
     window.set_child(Some(&content));

@@ -1,5 +1,8 @@
 {
   "name": "list",
+  "search-bar": {
+        "placeholder": "Search..."
+    }, 
   "view": {
     "layout": "list"
   },
