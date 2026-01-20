@@ -2,18 +2,19 @@ use std::cell::RefCell;
 use std::rc::Rc;
 use std::sync::mpsc;
 
-use gtk::Image;
 use gtk::ListBox;
 use gtk::ListBoxRow;
 use gtk::SelectionMode;
 use gtk::gdk::Key;
 use gtk::prelude::*;
-use gtk::{Label, ScrolledWindow, Window};
+use gtk::{ScrolledWindow, Window};
 
 use crate::InputData;
 use crate::core::handle_action;
-use crate::data::Icon;
 use crate::data::Item;
+use crate::frontend::FilterState;
+use crate::frontend::create_icon;
+use crate::frontend::create_label;
 
 pub fn create_picker(data: &InputData, tx: mpsc::Sender<i32>, window: Window) -> gtk::Box {
     let container = gtk::Box::new(gtk::Orientation::Vertical, 0);
@@ -99,59 +100,6 @@ fn create_row(item: &Item) -> ListBoxRow {
     row
 }
 
-fn create_icon(icon: &Option<Icon>) -> Option<gtk::Widget> {
-    icon.as_ref().map(|icon| match icon {
-        Icon::Unicode(text) => {
-            let label = Label::new(Some(text));
-            label.add_css_class("picker-icon");
-            label.add_css_class("picker-icon-unicode");
-            label.upcast()
-        }
-        Icon::Path(path) => {
-            let image = Image::from_file(path);
-            image.add_css_class("picker-icon");
-            image.add_css_class("picker-icon-path");
-            image.upcast()
-        }
-    })
-}
-
-fn create_label(text: &str) -> Label {
-    let label = Label::builder()
-        .label(text)
-        .xalign(0.0)
-        .hexpand(true)
-        .build();
-    label.add_css_class("picker-label");
-    label
-}
-
-fn create_scrolled(listbox: ListBox) -> ScrolledWindow {
-    let scrolled = ScrolledWindow::builder()
-        .hscrollbar_policy(gtk::PolicyType::Never)
-        .vscrollbar_policy(gtk::PolicyType::Automatic)
-        .vexpand(true)
-        .child(&listbox)
-        .build();
-    scrolled.add_css_class("picker-scrolled");
-    scrolled
-}
-
-fn setup_activation(
-    listbox: &ListBox,
-    items: &Rc<Vec<Item>>,
-    tx: mpsc::Sender<i32>,
-    window: Window,
-) {
-    let items = Rc::clone(items);
-    listbox.connect_row_activated(move |_, row| {
-        let index = row.index() as usize;
-        if let Some(item) = items.get(index) {
-            handle_action(&item.action, &tx, &window);
-        }
-    });
-}
-
 fn setup_keyboard(
     search_entry: Option<&gtk::SearchEntry>,
     listbox: &ListBox,
@@ -222,6 +170,17 @@ fn setup_keyboard(
     listbox.grab_focus(); // Listbox ALWAYS has focus
 }
 
+fn create_scrolled(listbox: ListBox) -> ScrolledWindow {
+    let scrolled = ScrolledWindow::builder()
+        .hscrollbar_policy(gtk::PolicyType::Never)
+        .vscrollbar_policy(gtk::PolicyType::Automatic)
+        .vexpand(true)
+        .child(&listbox)
+        .build();
+    scrolled.add_css_class("picker-scrolled");
+    scrolled
+}
+
 fn setup_search_filter(
     entry: &gtk::SearchEntry,
     listbox: &ListBox,
@@ -260,7 +219,17 @@ fn setup_search_filter(
     });
 }
 
-struct FilterState {
-    labels: Vec<String>,
-    query: String,
+fn setup_activation(
+    listbox: &ListBox,
+    items: &Rc<Vec<Item>>,
+    tx: mpsc::Sender<i32>,
+    window: Window,
+) {
+    let items = Rc::clone(items);
+    listbox.connect_row_activated(move |_, row| {
+        let index = row.index() as usize;
+        if let Some(item) = items.get(index) {
+            handle_action(&item.action, &tx, &window);
+        }
+    });
 }
