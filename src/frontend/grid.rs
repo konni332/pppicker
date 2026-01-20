@@ -133,6 +133,10 @@ fn setup_search_filter(
         state_filter.borrow_mut().query = entry.text().to_string().to_lowercase();
         flowbox_clone.invalidate_filter();
 
+        // Force layout update before selecting
+        while gtk::glib::MainContext::default().iteration(false) {}
+
+        // Select first visible child after filtering
         let mut idx = 0;
         while let Some(child) = flowbox_clone.child_at_index(idx) {
             if child.is_visible() {
@@ -141,8 +145,6 @@ fn setup_search_filter(
             }
             idx += 1;
         }
-
-        flowbox_clone.grab_focus();
     });
 }
 
