@@ -73,6 +73,24 @@ echo '{"name": "test", "items": [...]}' | pppicker
 - `"list"` - Vertical list layout (default)
 - `"grid"` - Grid layout for visual content
 
+#### Search Bar (Optional)
+
+Add a search bar to filter items:
+```json
+{
+  "name": "example-picker",
+  "search_bar": {
+    "placeholder": "Search..."
+  },
+  "view": {
+    "layout": "grid"
+  },
+  "items": [...]
+}
+```
+
+The search bar filters items by their labels as you type.
+
 #### Icon Types
 
 ```json
@@ -116,7 +134,9 @@ echo '{"name": "test", "items": [...]}' | pppicker
 
 ### Keyboard Controls
 
-- **Arrow Keys**: Navigate items
+- **Arrow Keys / Page Up/Down / Home/End**: Navigate items
+- **Type to search**: When search bar is enabled, typing filters items
+- **Backspace**: Delete last character in search (when search bar is enabled)
 - **Enter**: Select item and execute action
 - **Escape**: Close picker
 
@@ -135,6 +155,7 @@ The `{name}` is taken from the JSON input's `"name"` field.
 
 ```css
 .picker-window          /* Main window */
+.picker-search           /* Search entry */
 .picker-scrolled        /* Scrolled container */
 .picker-list            /* List view container */
 .picker-grid            /* Grid view container */
