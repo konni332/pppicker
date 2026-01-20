@@ -2,6 +2,10 @@
 
 A generic, highly customizable picker application for Wayland compositors. Inspired by tools like `rofi` and `wofi`, but with a focus on extreme stylability through CSS and JSON configuration.
 
+![Demo: list view](assets/list_demo.png)
+![Demo: grid view](assets/grid_demo.png)
+
+
 ## Features
 
 - **JSON-driven content**: Define your picker items in simple JSON format
